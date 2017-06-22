@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", showObj);
-var el = document.getElementsByClassName("masterhead--text")[0];
+var el = document.getElementsByClassName("masterhead__text")[0];
 var opacity = 0;
 
 function showObj(){
