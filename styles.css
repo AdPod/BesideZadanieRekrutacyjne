@@ -46,7 +46,7 @@ h2{
 .navbar__icons__img{
     display: inline-block;
     vertical-align: middle;
-    margin-right: 80px;
+    cursor: pointer;
 }
 
 .front {
@@ -203,6 +203,57 @@ h2{
 .hideOnDesktop{
     display: none;
 }
+#navbar__menu__content{
+    position: absolute;
+    margin-top: 5px;
+    right: 10px;
+    background-color: rgba(255,255,255,0.8);
+    overflow: hidden;
+    height: 0;
+    z-index: -1;
+    opacity: 0;
+    width: 163px;
+}
+#navbar__menu__content ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+#navbar__menu__content a{
+    text-decoration: none;
+    line-height: 200%;
+}
+.navbar__search, .navbar__menu{
+    margin: auto 0;
+    padding: 0 20px;
+}
+
+#search__input{
+    height: 30px;
+    color: #9bc651;
+    text-transform: uppercase;
+    padding-right: 5px;
+    opacity: 0;
+    width: 0;
+    display: none;
+}
+.search--active img{
+    position: absolute;
+    left: 25px;
+    height: 20px;
+    top: 9px;
+    width: auto!important;
+    z-index: 102;
+}
+.search--active input{
+    height: 30px;
+    color: #9bc651;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid dimgrey;
+    padding-left: 30px;
+    display: block!important;
+}
 @media screen and (max-width: 960px) {
     h1{
         font-size: 17pt;
@@ -226,7 +277,7 @@ h2{
         min-width: 245px;
     }
     .container__img {
-        width: 42%;
+        width: 48%;
         -webkit-transform: translateY(125px);
         -ms-transform: translateY(125px);
         transform: translateY(125px);
@@ -238,6 +289,15 @@ h2{
     .navbar__title {
         height: 27px;
     }
+    .navbar__icons{
+        width: 100%;
+
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+    .navbar__icons__img{
+        width: 35px;
+    }
 }
 @media screen and (max-width: 480px) {
     h1{
@@ -248,8 +308,9 @@ h2{
         min-width: 190px;
     }
     .masterhead__text{
-        margin-top: 40px;
-        min-width: 200px;
+        margin-top: 30px;
+        margin-left: 20px;
+        min-width: 167px;
     }
     .container__img{
         -webkit-transform: translate(-80px, 100px);
@@ -267,6 +328,35 @@ h2{
         padding: 50px 0;
     }
     .boxgrid__item {
-        min-width: 220px;
+        min-width: 180px;
+        padding: 36px 36px 0 36px;
+        height: 230px;
+    }
+    .navbar__search, .navbar__menu{
+        margin: auto 0;
+        padding: 0 10px;
+    }
+    .navbar__icons__img{
+        width: 25px;
+    }
+    .search--active{
+        -webkit-transform: translateY(42px);
+        -ms-transform: translateY(42px);
+        transform: translateY(42px);
+        width: 100%;
+    }
+    .search--active img{
+        top: 5px;
+        left: 17px;
+    }
+    #container{
+        padding: 20px 20px 80px 20px;
+    }
+    .content__text__div{
+        text-align: justify;
+        min-width: 180px;
+    }
+    .boxgrid__item__details {
+        height: 100px;
     }
 }
